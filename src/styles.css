@@ -101,3 +101,23 @@ footer {
         visibility: hidden;
     }
 }
+
+@media (max-width: 800px) {
+    h1{
+        font-size: 20px;
+    }
+    .form-container {
+        padding:20px;
+        margin: 10px;
+    }
+    .submit-button {
+    padding: 1px 7px;
+    }
+    .recipe {
+        padding:20px;
+        font-size: 14px;
+    }
+ .submit-button, .hint {
+        font-size: 14px;
+    } 
+}
