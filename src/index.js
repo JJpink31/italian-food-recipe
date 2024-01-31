@@ -17,12 +17,13 @@ function generateRecipe(event) {
     let apikey="f8833caao3caf01e1ffbc8t348acfb03";
     let apiUrl=`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apikey}`;
 
-    console.log("Generating recipe");
-    console.log (`Prompts: ${prompt}`);
-    console.log (`Context: ${context}`);
+let recipeElement = document.querySelector("#recipe");
+recipeElement.classList.remove("hidden");
+recipeElement.innerHTML= `<div class="generating"> 🕰 Generating a ${instructionInput.value} recipe </div>`;
+
 
  axios.get(apiUrl).then(displayRecipe);   
 }
 
-let recipeElement = document.querySelector("#recipe-form");
-recipeElement.addEventListener("submit", generateRecipe);
+let recipeFormElement = document.querySelector("#recipe-form");
+recipeFormElement.addEventListener("submit", generateRecipe);
